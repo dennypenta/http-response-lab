@@ -1,0 +1,88 @@
+{
+    "id": "2489660222",
+    "type": "IssueCommentEvent",
+    "actor": {
+        "id": 446036,
+        "login": "trydis",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/trydis",
+        "avatar_url": "https://avatars.githubusercontent.com/u/446036?"
+    },
+    "repo": {
+        "id": 24246283,
+        "name": "trydis/FIFA-Ultimate-Team-2015-Toolkit",
+        "url": "https://api.github.com/repos/trydis/FIFA-Ultimate-Team-2015-Toolkit"
+    },
+    "payload": {
+        "action": "created",
+        "issue": {
+            "url": "https://api.github.com/repos/trydis/FIFA-Ultimate-Team-2015-Toolkit/issues/50",
+            "labels_url": "https://api.github.com/repos/trydis/FIFA-Ultimate-Team-2015-Toolkit/issues/50/labels{/name}",
+            "comments_url": "https://api.github.com/repos/trydis/FIFA-Ultimate-Team-2015-Toolkit/issues/50/comments",
+            "events_url": "https://api.github.com/repos/trydis/FIFA-Ultimate-Team-2015-Toolkit/issues/50/events",
+            "html_url": "https://github.com/trydis/FIFA-Ultimate-Team-2015-Toolkit/issues/50",
+            "id": 46961561,
+            "number": 50,
+            "title": "Sometimes I got this error: A first chance exception of type 'System.IndexOutOfRangeException' occurred in UltimateTeam.Toolkit.dll",
+            "user": {
+                "login": "khha",
+                "id": 9421415,
+                "avatar_url": "https://avatars.githubusercontent.com/u/9421415?v=3",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/khha",
+                "html_url": "https://github.com/khha",
+                "followers_url": "https://api.github.com/users/khha/followers",
+                "following_url": "https://api.github.com/users/khha/following{/other_user}",
+                "gists_url": "https://api.github.com/users/khha/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/khha/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/khha/subscriptions",
+                "organizations_url": "https://api.github.com/users/khha/orgs",
+                "repos_url": "https://api.github.com/users/khha/repos",
+                "events_url": "https://api.github.com/users/khha/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/khha/received_events",
+                "type": "User",
+                "site_admin": false
+            },
+            "labels": [],
+            "state": "closed",
+            "locked": false,
+            "assignee": null,
+            "milestone": null,
+            "comments": 1,
+            "created_at": "2014-10-27T21:24:51Z",
+            "updated_at": "2015-01-01T15:20:00Z",
+            "closed_at": "2015-01-01T15:20:00Z",
+            "body": "I am a c# asp.net developer and just started to creating an auto buyer windows application. The login functionality is working. I try to do some search stuff and show the results in a datagridview. I do very much try and error. But sometimes I got this error:\r\n\r\nA first chance exception of type 'System.IndexOutOfRangeException' occurred in UltimateTeam.Toolkit.dll\r\n\r\nAdditional information: Index was outside the bounds of the array.\r\n\r\nI got this error on this piece of code:\r\n\r\nvar sessionId = Regex.Match(await authResponseMessage.Content.ReadAsStringAsync(), \"\\\"sid\\\":\\\"\\\\S+\\\"\")\r\n                .Value\r\n                .Split(new[] { ':' })[1]\r\n                .Replace(\"\\\"\", string.Empty);\r\n\r\nI have check the value of \"authResponseMessage\" and it was filled and not null or empty. Is this because I do very much logins because I do try and errors?\r\n\r\nthis is the value of \"authResponseMessage.Content.ReadAsStringAsync()\":\r\n\r\nId = 64, Status = RanToCompletion, Method = \"{null}\", Result = \"{\\\"debug\\\":\\\"\\\",\\\"string\\\":\\\"Error\\\",\\\"reason\\\":\\\"Error retrieving authCode.\\\",\\\"code\\\":\\\"500\\\"}\"\r\n\r\n"
+        },
+        "comment": {
+            "url": "https://api.github.com/repos/trydis/FIFA-Ultimate-Team-2015-Toolkit/issues/comments/68488925",
+            "html_url": "https://github.com/trydis/FIFA-Ultimate-Team-2015-Toolkit/issues/50#issuecomment-68488925",
+            "issue_url": "https://api.github.com/repos/trydis/FIFA-Ultimate-Team-2015-Toolkit/issues/50",
+            "id": 68488925,
+            "user": {
+                "login": "trydis",
+                "id": 446036,
+                "avatar_url": "https://avatars.githubusercontent.com/u/446036?v=3",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/trydis",
+                "html_url": "https://github.com/trydis",
+                "followers_url": "https://api.github.com/users/trydis/followers",
+                "following_url": "https://api.github.com/users/trydis/following{/other_user}",
+                "gists_url": "https://api.github.com/users/trydis/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/trydis/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/trydis/subscriptions",
+                "organizations_url": "https://api.github.com/users/trydis/orgs",
+                "repos_url": "https://api.github.com/users/trydis/repos",
+                "events_url": "https://api.github.com/users/trydis/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/trydis/received_events",
+                "type": "User",
+                "site_admin": false
+            },
+            "created_at": "2015-01-01T15:20:00Z",
+            "updated_at": "2015-01-01T15:20:00Z",
+            "body": "Closing this because of inactivity."
+        }
+    },
+    "public": true,
+    "created_at": "2015-01-01T15:20:00Z"
+}
