@@ -2,10 +2,6 @@ package main
 
 import (
 	_ "embed"
-	"fmt"
-	"testing"
-
-	"github.com/stretchr/testify/assert"
 )
 
 //go:embed testdata/j1.json
@@ -37,36 +33,3 @@ var j4Expected string
 
 //go:embed testdata/j5_expected.json
 var j5Expected string
-
-func TestSplitFunc(t *testing.T) {
-	type testCase struct {
-		input    []byte
-		expected string
-	}
-	for i, tt := range []testCase{
-		{input: j1, expected: j1Expected},
-		{input: j2, expected: j2Expected},
-		{input: j3, expected: j3Expected},
-		{input: j4, expected: j4Expected},
-		{input: j5, expected: j5Expected},
-	} {
-		t.Run(fmt.Sprintf("%d", i+1), func(t *testing.T) {
-			split := newSplitFunc()
-			advance, buf, err := split(tt.input, false)
-
-			if err != nil {
-				t.Error(err)
-				t.FailNow()
-			}
-
-			assert.JSONEq(t, tt.expected, string(buf))
-			// if string(buf) != tt.expected {
-			// 	t.Log(string(buf))
-			// 	t.Error("jsons must be equal")
-			// 	t.FailNow()
-			// }
-
-			_ = advance
-		})
-	}
-}

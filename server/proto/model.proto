@@ -1,0 +1,40 @@
+syntax = "proto3";
+option go_package = "/model";
+
+import "google/protobuf/timestamp.proto";
+
+message Auto {
+    google.protobuf.Timestamp CreatedAt = 1;
+    bool Public = 2;
+    string ID  = 3;
+    string Type = 4;
+    Actor Actor = 5;
+    Repo Repo = 6;
+    Payload Payload = 7;
+}
+
+message Actor {
+    int64 ID = 1;
+    string Login = 2;
+    string GravatarID = 3;
+    string URL  = 4;
+    string AvatarURL = 5;
+}
+
+message Repo {
+    int64 ID = 1;
+    string Name = 2;
+    string URL = 3;
+}
+
+message Payload {
+    string Ref = 1;
+    string RefType = 2;
+    string MasterBranch = 3;
+    string Description = 4;
+    string PusherType = 5;
+}
+
+message AutoList {
+    repeated Auto Autos = 1;
+}
